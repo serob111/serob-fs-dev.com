@@ -81,7 +81,7 @@
 }
 
 .hero {
-  background-image: url("/herobg.svg");
+  background-image: url("/serob-fs-dev.com/assets/herobg.svg");
 }
 
 .hero .section-inner {
@@ -89,19 +89,19 @@
 }
 
 .skills {
-  background-image: url("/myskillsbg.svg");
+  background-image: url("/serob-fs-dev.com/assets/myskillsbg.svg");
 }
 
 .experience {
-  background-image: url("/experiencebg.svg");
+  background-image: url("/serob-fs-dev.com/assets/experiencebg.svg");
 }
 
 .projects {
-  background-image: url("/projectsbg.svg");
+  background-image: url("/serob-fs-dev.com/assets/projectsbg.svg");
 }
 
 .contact {
-  background-image: url("/space.svg");
+  background-image: url("/serob-fs-dev.com/assets/space.svg");
 }
 
 .eyebrow {
