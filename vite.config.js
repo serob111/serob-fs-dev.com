@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "https://serob111.github.io/serob-fs-dev.com/assets/",
+  base: "/serob-fs-dev.com/",
   plugins: [react()],
   publicDir: "public"
 });
