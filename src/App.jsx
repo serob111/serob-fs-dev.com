@@ -127,8 +127,8 @@ const experiences = [
 const projects = [
   {
     title: "AppsGeyser",
-    video: "/dashvideo.webm",
-    image: "/Appsgeyser.png",
+    video: "dashvideo.webm",
+    image: "Appsgeyser.png",
     appUrl: "https://appsgeyser.com/",
     sourceUrl: "https://github.com/serobXX/newag",
     description:
@@ -136,7 +136,7 @@ const projects = [
   },
   {
     title: "PharmacyOne",
-    image: "/pharmacy.png",
+    image: "pharmacy.png",
     appUrl: "#",
     sourceUrl: "https://github.com/serob111/newpharm",
     description:
@@ -144,7 +144,7 @@ const projects = [
   },
   {
     title: "A/B Test Chart",
-    image: "/chart.png",
+    image: "chart.png",
     appUrl: "https://serob111.github.io/ab-test-chart/",
     sourceUrl: "https://github.com/serob111/ab-test-chart",
     description:
@@ -152,7 +152,7 @@ const projects = [
   },
   {
     title: "Gauge Automotive Car Bidding Platform",
-    image: "/Gauge.png",
+    image: "Gauge.png",
     appUrl: "https://stockupsolutions.com/inventory",
     sourceUrl: "https://github.com/serobXX/StockUP",
     description:
@@ -160,7 +160,7 @@ const projects = [
   },
   {
     title: "Fantasy Soccer Manager",
-    image: "/soccer.png",
+    image: "soccer.png",
     appUrl: "#",
     sourceUrl: "https://github.com/serob111/full-stack-react-node-express-graph",
     description:
@@ -177,6 +177,7 @@ const socials = [
 
 export default function App() {
   const [expIndex, setExpIndex] = useState(0);
+  const baseUrl = import.meta.env.BASE_URL;
   const [formData, setFormData] = useState({
     email: "",
     subject: "",
@@ -211,10 +212,10 @@ export default function App() {
 
 
   const contactSocials = [
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/serob-khurshudyan/", icon: "/linkedin.svg" },
-    { label: "Upwork", href: "https://www.upwork.com/freelancers/~013550d04befdd4654?viewMode=1", icon: "/upwork.svg" },
-    { label: "GitHub", href: "https://github.com/serob111", icon: "/github.svg" },
-    { label: "Toptal", href: "https://www.toptal.com/developers/resume/serob-khurshudyan", icon: "/toptal.svg" }
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/serob-khurshudyan/", icon: "linkedin.svg" },
+    { label: "Upwork", href: "https://www.upwork.com/freelancers/~013550d04befdd4654?viewMode=1", icon: "upwork.svg" },
+    { label: "GitHub", href: "https://github.com/serob111", icon: "github.svg" },
+    { label: "Toptal", href: "https://www.toptal.com/developers/resume/serob-khurshudyan", icon: "toptal.svg" }
   ];
 
   return (
@@ -236,14 +237,14 @@ export default function App() {
           </h2>
        
           <div className="cta-line reveal delay-4">
-            <a className="badge mt-20" href="/SEROBRESUME.pdf" download="SEROBRESUME.pdf">
+            <a className="badge mt-20" href={`${baseUrl}SEROBRESUME.pdf`} download="SEROBRESUME.pdf">
               Download Resume
             </a>
           </div>
         </div>
 
          <div className="earth-wrap">
-          <img src="/earth.svg" alt="Earth" />
+          <img src={`${baseUrl}earth.svg`} alt="Earth" />
         </div>
       </section>
 
@@ -253,16 +254,16 @@ export default function App() {
         aria-labelledby="skills-title"
       >
         <div className="skills-orbit" aria-hidden="true">
-          <img className="orbit-icon icon-1" src="/react.svg" alt="React" />
-          <img className="orbit-icon icon-2" src="/js.svg" alt="JavaScript" />
-          <img className="orbit-icon icon-3" src="/node.svg" alt="Node.js" />
-          <img className="orbit-icon icon-4" src="/nest.svg" alt="NestJS" />
-          <img className="orbit-icon icon-5" src="/next.svg" alt="Next.js" />
-          <img className="orbit-icon icon-6" src="/mongodb.svg" alt="MongoDB" />
-          <img className="orbit-icon icon-7" src="/aws.svg" alt="AWS" />
-          <img className="orbit-icon icon-8" src="/cloud.svg" alt="Cloud" />
-          <img className="orbit-icon icon-9" src="/docker.svg" alt="Docker" />
-          <img className="orbit-icon icon-10" src="/typescript.svg" alt="TypeScript" />
+          <img className="orbit-icon icon-1" src={`${baseUrl}react.svg`} alt="React" />
+          <img className="orbit-icon icon-2" src={`${baseUrl}js.svg`} alt="JavaScript" />
+          <img className="orbit-icon icon-3" src={`${baseUrl}node.svg`} alt="Node.js" />
+          <img className="orbit-icon icon-4" src={`${baseUrl}nest.svg`} alt="NestJS" />
+          <img className="orbit-icon icon-5" src={`${baseUrl}next.svg`} alt="Next.js" />
+          <img className="orbit-icon icon-6" src={`${baseUrl}mongodb.svg`} alt="MongoDB" />
+          <img className="orbit-icon icon-7" src={`${baseUrl}aws.svg`} alt="AWS" />
+          <img className="orbit-icon icon-8" src={`${baseUrl}cloud.svg`} alt="Cloud" />
+          <img className="orbit-icon icon-9" src={`${baseUrl}docker.svg`} alt="Docker" />
+          <img className="orbit-icon icon-10" src={`${baseUrl}typescript.svg`} alt="TypeScript" />
         </div>
         <div className="section-inner">
           <div id="skills-title" className="section-title reveal">
@@ -347,11 +348,11 @@ export default function App() {
                 <div className="project-media">
                   {proj.video ? (
                     <video autoPlay muted loop playsInline preload="auto">
-                      <source src={proj.video} type="video/webm" />
-                      <source src={proj.video} />
+                      <source src={`${baseUrl}${proj.video}`} type="video/webm" />
+                      <source src={`${baseUrl}${proj.video}`} />
                     </video>
                   ) : (
-                    <img src={proj.image} alt={proj.title} />
+                    <img src={`${baseUrl}${proj.image}`} alt={proj.title} />
                   )}
                 </div>
                 <div className="project-body">
@@ -365,7 +366,7 @@ export default function App() {
                     )}
                     {proj.sourceUrl && proj.sourceUrl !== "#" && (
                       <a className="icon-btn" href={proj.sourceUrl} target="_blank" rel="noreferrer" aria-label="Open source code">
-                        <img src="/github.svg" alt="" aria-hidden="true" />
+                        <img src={`${baseUrl}github.svg`} alt="" aria-hidden="true" />
                       </a>
                     )}
                   </div>
@@ -432,7 +433,7 @@ export default function App() {
                 rel="noreferrer"
                 aria-label={s.label}
               >
-                <img src={s.icon} alt="" aria-hidden="true" />
+                <img src={`${baseUrl}${s.icon}`} alt="" aria-hidden="true" />
               </a>
             ))}
           </div>
