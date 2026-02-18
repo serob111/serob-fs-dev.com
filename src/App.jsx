@@ -17,7 +17,7 @@ const skills = [
     title: "Backend",
     items: [
       "TypeScript (Advanced Types)",
-      "NestJS",
+      "Nest.JS",
       "WebSockets (Socket.io)",
       "Payment Integrations (Stripe / Chargebee)",
       "Queues (BullMQ / Redis)",
