@@ -3,10 +3,10 @@ import "./App.css";
 
 const skills = [
   {
-    title: "Frontend",
+    title: "Frontend ",
     items: [
       "React Query / TanStack Query",
-      "Redux Toolkit / Zustand",
+      "Redux Toolkit / Zustand/ SAGA",
       "React Hook Form",
       "UI Libraries (MUI / Tailwind / Shadcn)",
       "Performance (Memo, Virtualization, Profiling)",
